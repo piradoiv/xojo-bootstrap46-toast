@@ -113,6 +113,7 @@ namespace Bootstrap46 {
             this.mToastWrapper.style.top = '20px';
             this.mToastWrapper.style.right = '20px';
             this.mToastWrapper.style.width = '350px';
+            this.mToastWrapper.style.zIndex = '1040';
 
             document.getElementById('XojoSession')?.appendChild(this.mToastWrapper);
         }

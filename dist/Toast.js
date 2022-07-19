@@ -93,6 +93,7 @@ var Bootstrap46;
             this.mToastWrapper.style.top = '20px';
             this.mToastWrapper.style.right = '20px';
             this.mToastWrapper.style.width = '350px';
+            this.mToastWrapper.style.zIndex = '1040';
             (_a = document.getElementById('XojoSession')) === null || _a === void 0 ? void 0 : _a.appendChild(this.mToastWrapper);
         }
     }

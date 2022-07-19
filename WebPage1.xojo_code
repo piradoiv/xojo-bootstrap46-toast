@@ -236,8 +236,6 @@ Begin WebPage WebPage1
       Left            =   0.0
       LockedInPosition=   False
       Scope           =   2
-      TabIndex        =   11
-      TabStop         =   True
       Top             =   0.0
       _mPanelIndex    =   -1
    End
