@@ -9,8 +9,9 @@ var Bootstrap46;
         }
         updateControl(data) {
             const js = JSON.parse(data);
-            if (typeof js.commands === 'object' && js.commands.length > 0) {
-                js.commands.forEach((command) => this.parseCommand(command));
+            const commands = JSON.parse(Toast.decode(js.commands));
+            if (typeof commands === 'object' && commands.length > 0) {
+                commands.forEach((command) => this.parseCommand(command));
             }
         }
         toast(title, timeAgo, body, autoHide = true, hideDelay = 500) {
@@ -95,6 +96,9 @@ var Bootstrap46;
             this.mToastWrapper.style.width = '350px';
             this.mToastWrapper.style.zIndex = '1040';
             (_a = document.getElementById('XojoSession')) === null || _a === void 0 ? void 0 : _a.appendChild(this.mToastWrapper);
+        }
+        static decode(str) {
+            return decodeURIComponent(atob(str));
         }
     }
     Bootstrap46.Toast = Toast;

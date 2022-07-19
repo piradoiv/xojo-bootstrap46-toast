@@ -19,8 +19,9 @@ namespace Bootstrap46 {
 
         updateControl(data: string) {
             const js = JSON.parse(data);
-            if (typeof js.commands === 'object' && js.commands.length > 0) {
-                js.commands.forEach((command: ToastCommand) => this.parseCommand(command));
+            const commands = JSON.parse(Toast.decode(js.commands));
+            if (typeof commands === 'object' && commands.length > 0) {
+                commands.forEach((command: ToastCommand) => this.parseCommand(command));
             }
         }
 
@@ -116,6 +117,10 @@ namespace Bootstrap46 {
             this.mToastWrapper.style.zIndex = '1040';
 
             document.getElementById('XojoSession')?.appendChild(this.mToastWrapper);
+        }
+
+        private static decode(str: string): string {
+            return decodeURIComponent(atob(str));
         }
     }
 }
