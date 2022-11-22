@@ -28,18 +28,17 @@ Begin WebPage WebPage1
    _ImplicitInstance=   False
    _mDesignHeight  =   0
    _mDesignWidth   =   0
-   _mName          =   ""
    _mPanelIndex    =   -1
    Begin WebButton ShowToastButton
       AllowAutoDisable=   False
       Cancel          =   False
       Caption         =   "Toast!"
       ControlID       =   ""
-      Default         =   False
+      Default         =   True
       Enabled         =   True
       Height          =   38
       Index           =   -2147483648
-      Indicator       =   0
+      Indicator       =   1
       Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
@@ -53,7 +52,7 @@ Begin WebPage WebPage1
       Tooltip         =   ""
       Top             =   474
       Visible         =   True
-      Width           =   100
+      Width           =   189
       _mPanelIndex    =   -1
    End
    Begin WebTextField ToastTitleTextField
